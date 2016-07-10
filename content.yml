@@ -1,0 +1,14 @@
+---
+ - hosts: rupin
+   gather_facts: False
+   user: root
+   vars:
+    welcome: "intro to ansible"
+   tasks:
+     - name: ping
+       ping:
+     - name: sample motd
+       copy:
+        dest: /tmp/motd
+        content: "hiiiiiii ansible ...................."
+
