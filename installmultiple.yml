@@ -1,0 +1,17 @@
+---
+ - hosts: rupin
+   gather_facts: False
+   user: root
+   tasks:
+     - name: Install webfs
+       apt: pkg=webfs state=installed update_cache=true
+     - name: copy from my laptop to remote machine
+       copy:
+          src: install.yml
+          dest: /tmp/install.yml
+     - name: apache service restart
+       service: name={{ item }} state=restarted
+       with_items:
+           - apache2
+           - nginx
+           - ssh    
