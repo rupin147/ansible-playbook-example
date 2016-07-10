@@ -1,0 +1,7 @@
+---
+ - hosts: rupin
+   gather_facts: False
+   user: root
+   tasks:
+    - name: test connection
+      ping:
