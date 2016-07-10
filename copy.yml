@@ -1,0 +1,7 @@
+---
+ - hosts: rupin
+   gather_facts: False
+   user: root
+   tasks:
+    - name: copy the file ansible server to remote host
+      copy: src=/etc/ansible/hosts dest=/tmp/rupin
