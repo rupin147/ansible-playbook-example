@@ -1,0 +1,7 @@
+---
+ - hosts: rupin
+   gather_facts: False
+   user: root
+   tasks:
+     - name: create user
+       user: name=test password=$6$I0Y70YelIjQq$PuW7P.u8XHROaBm0LyEMe2KrqcYRysGGlmgAlQ8uVeHZ5Mu6fLJ8BTBtoAfwA7k0zf3CUxNQs1OuSc1tIuVpg.
